@@ -3,9 +3,8 @@ package com.Java.Arrays;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArraysQ4 {
-
-    //https://practice.geeksforgeeks.org/problems/sort-an-array-of-0s-1s-and-2s/0
+public class ArraysQ5 {
+    //https://www.geeksforgeeks.org/move-negative-numbers-beginning-positive-end-constant-extra-space/
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
@@ -22,13 +21,11 @@ public class ArraysQ4 {
         int high = arr.length - 1;
         int mid = 0;
         while (mid <= high) {
-            if (arr[mid] == 0) {
+            if (arr[mid] < 0) {
                 swap(arr, low, mid);
                 low++;
                 mid++;
-            } else if (arr[mid] == 1)
-                mid++;
-            else {
+            } else {
                 swap(arr, mid, high);
                 high--;
             }
